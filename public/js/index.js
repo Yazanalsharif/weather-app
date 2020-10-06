@@ -11,7 +11,7 @@ const messageTwo = document.getElementById("message-2");
 weatherForm.addEventListener("submit", (evt) => {
     evt.preventDefault();
     const location = input.value;
-    const url = "http://www.localhost:3000/weather?address=" + location;
+    const url = "/weather?address=" + location;
     messageOne.innerHTML = "Loading....";
     messageTwo.textContent = "";
     fetch(url).then(response => {

@@ -9,6 +9,7 @@ const app = express();
 const pathPublicDir = path.join(__dirname, "../public");
 const pathViews = path.join(__dirname, "../templetes/views");
 const partialsPath = path.join(__dirname, "../templetes/partials");
+const port = process.env.PORT || 3000
 
 //setup view engine to serve
 app.set("view engine", "hbs");
@@ -84,7 +85,7 @@ app.get("*", (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("the server up on port 3000");
+app.listen(port, () => {
+    console.log("the server up on port " + port);
 });
 
